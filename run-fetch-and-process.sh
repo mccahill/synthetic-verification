@@ -1,0 +1,4 @@
+#!/bin/bash
+#
+export VERIFYPROCESSTOKEN='PROCESS_TOKEN_GOES_HERE'
+R CMD BATCH fetchjobs.r
