@@ -26,7 +26,7 @@ process_one_job <- function(x) {
 }
 
 # fetch the list of jobs that need to be processed and run them
-url <- "https://synthetic.oit.duke.edu/app_install/awaiting_remote_processing"
+url <- "https://YOUR-SERVER-NAME-HERE/app_install/awaiting_remote_processing"
 messy_result <- POST(url, encode="multipart",  accept_json(), content_type_json(),
                      query=list(verification_processor_token = magic_verify_token))
 cleaned_result <- fromJSON(content(messy_result, "text"))
