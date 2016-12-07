@@ -46,7 +46,8 @@ nplots = PriRP(D, epsilon, unit)
 
 # write the output image file
 png(myoutputfile, width = 1024, height = 768)
-plot(nplots,pch="+",ylab="residuals", xlab="predicted values")
+title <- paste("Residuals for original data with epsilon= ", epsilon, ", model: ",model, sep='')
+plot(nplots,pch="+",ylab="residuals", xlab=title)
 dev.off()
 
 # upload the result to the mothership 
